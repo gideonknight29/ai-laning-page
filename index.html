@@ -1,0 +1,526 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Alucard Ai landing page</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100..700;1,100..700&family=Stick&display=swap" rel="stylesheet">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        purple: {
+                            400: '#c084fc',
+                            600: '#9333ea',
+                            700: '#7e22ce',
+                            900: '#581c87',
+                            950: '#3b0764'
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        .glow-purple {
+            box-shadow: 0 0 30px -5px rgba(147, 51, 234, 0.5);
+        }
+        .glow-purple-lg {
+            box-shadow: 0 0 50px -12px rgba(147, 51, 234, 0.3);
+        }
+        .bg-gradient-conic {
+            background: conic-gradient(from 90deg at 50% 0%, #3b0764, #0c0a09 25%, #0c0a09 75%, #3b0764 100%);
+        }
+        .animate-pulse-slow {
+            animation: pulse 3s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+        }
+        html {
+            scroll-behavior: smooth;
+        }
+    </style>
+</head>
+<body class="bg-black text-white overflow-x-hidden">
+    <!-- Navigation -->
+    <nav class="fixed top-0 left-0 right-0 z-50 bg-black/20 backdrop-blur-sm">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex items-center justify-between h-16 my-2">
+                <div class="flex items-center gap-8 lg:gap-16">
+                    <!-- Logo -->
+                    <a href="#" class="flex items-center">
+                        <div class="w-10 h-10 rounded-xl bg-purple-600 flex items-center justify-center">
+                            <div class="w-3 h-3 rounded-full bg-white"></div>
+                        </div>
+                    </a>
+                    
+                    <!-- Desktop Navigation -->
+                    <div class="hidden md:flex items-center space-x-8">
+                        <a href="#features" class="text-gray-400 hover:text-yellow-400 transition-colors font-['stick'] duration-200">Features</a>
+                        <a href="#developers" class="text-gray-400 hover:text-yellow-400 transition-colors font-['stick'] duration-200">Developers</a>
+                        <a href="#pricing" class="text-gray-400 hover:text-yellow-400 transition-colors font-['stick'] duration-200">Pricing</a>
+                        <a href="#changelog" class="text-gray-400 hover:text-yellow-400 transition-colors font-['stick'] duration-200">Changelog</a>
+                    </div>
+                </div>
+                
+                <!-- Mobile Menu Button -->
+                <button id="mobile-menu-btn" class="md:hidden text-gray-400 hover:text-white">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+                    </svg>
+                </button>
+                
+                <!-- Join Waitlist Button -->
+                <button class="bg-purple-600 hover:bg-purple-700 text-white px-4 py-2 rounded-xl transition-colors font-['stick'] duration-200">
+                    Join waitlist
+                </button>
+            </div>
+        </div>
+        
+        <!-- Mobile Menu -->
+        <div id="mobile-menu" class="hidden md:hidden bg-black/90 backdrop-blur-sm border-t border-white/10">
+            <div class="px-4 py-4 space-y-4">
+                <a href="#features" class="block text-gray-400 hover:text-white transition-colors duration-200">Features</a>
+                <a href="#developers" class="block text-gray-400 hover:text-white transition-colors duration-200">Developers</a>
+                <a href="#pricing" class="block text-gray-400 hover:text-white transition-colors duration-200">Pricing</a>
+                <a href="#changelog" class="block text-gray-400 hover:text-white transition-colors duration-200">Changelog</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="relative min-h-screen bg-gradient-to-b from-black via-purple-950/20 to-black overflow-hidden">
+        <!-- Enhanced Gradient Background -->
+        <div class="absolute inset-0">
+            <div class="absolute inset-0 bg-gradient-to-b from-purple-900/30 via-purple-800/20 to-transparent"></div>
+            <div class="absolute inset-0 bg-radial-gradient from-purple-600/30 via-purple-900/20 to-transparent"></div>
+            <div class="absolute inset-0 bg-gradient-conic opacity-50"></div>
+        </div>
+
+        <div class="relative pt-32 pb-20 sm:pt-40">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+                <!-- Badge -->
+                <div class="inline-flex items-center rounded-full px-4 py-1 mb-8 bg-purple-900/50 border border-purple-700/50 glow-purple">
+                    <div class="w-2 h-2 rounded-full bg-purple-400 mr-2 animate-pulse-slow"></div>
+                    <span class="text-sm text-purple-300">Latest integration just arrived</span>
+                </div>
+
+                <!-- Main Headline -->
+                <h1 class="text-4xl sm:text-6xl lg:text-7xl font-bold tracking-tight text-white mb-6">
+                    Boost your<br>
+                    rankings <span class="text-purple-400">with AI.</span>
+                </h1>
+
+                <!-- Subtitle -->
+                <p class="max-w-2xl mx-auto text-lg sm:text-xl text-gray-300 font-['stick'] mb-8">
+                    Elevate your site's visibility effortlessly with AI, where smart technology meets user-friendly SEO tools.
+                </p>
+
+                <!-- CTA Button -->
+                <button class="bg-white text-black hover:bg-gray-100 px-8 py-3 rounded-xl font-medium text-lg transition-colors font-['stick'] duration-200 mb-16">
+                    Start for free
+                </button>
+
+                <!-- Dashboard Preview -->
+                <div class="relative max-w-5xl mx-auto mt-20">
+                    <div class="relative rounded-lg overflow-hidden">
+                        <!-- Enhanced glow effect -->
+                        <div class="absolute inset-0 bg-purple-600/40 blur-[50px]"></div>
+                        <div class="absolute inset-0 bg-purple-500/20 blur-[100px]"></div>
+                        <img
+                            src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&h=675&q=80"
+                            alt="AI Kit Dashboard"
+                            class="relative rounded-lg border border-white/10 shadow-2xl w-full"
+                        />
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section id="testimonials" class="relative bg-gradient-to-b from-purple-900/20 via-purple-950/30 to-transparent py-32">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid gap-8 md:grid-cols-3">
+                <!-- Testimonial 1 -->
+                <div class="relative group">
+                    <div class="absolute inset-0 bg-purple-600/20 blur-xl group-hover:bg-purple-600/30 transition-colors duration-300"></div>
+                    <div class="relative bg-black/40 backdrop-blur-sm rounded-2xl p-6 border border-white/10">
+                        <div class="flex flex-col h-full">
+                            <div class="mb-6">
+                                <img
+                                    src="https://images.unsplash.com/photo-1494790108755-2616b612b786?ixlib=rb-4.0.3&auto=format&fit=crop&w=96&h=96&q=80"
+                                    alt="Talia Taylor"
+                                    class="w-24 h-24 rounded-2xl object-cover"
+                                />
+                            </div>
+                            <blockquote class="flex-1 mb-6">
+                                <p class="text-lg font-medium text-white">
+                                    "This product has completely transformed how I manage my projects and deadlines"
+                                </p>
+                            </blockquote>
+                            <footer>
+                                <div class="font-medium text-white">Talia Taylor</div>
+                                <div class="text-sm text-gray-400">Digital Marketing Director @ Quantum</div>
+                            </footer>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Testimonial 2 -->
+                <div class="relative group">
+                    <div class="absolute inset-0 bg-purple-600/20 blur-xl group-hover:bg-purple-600/30 transition-colors duration-300"></div>
+                    <div class="relative bg-black/40 backdrop-blur-sm rounded-2xl p-6 border border-white/10">
+                        <div class="flex flex-col h-full">
+                            <div class="mb-6">
+                                <img
+                                    src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?ixlib=rb-4.0.3&auto=format&fit=crop&w=96&h=96&q=80"
+                                    alt="Alex Chen"
+                                    class="w-24 h-24 rounded-2xl object-cover"
+                                />
+                            </div>
+                            <blockquote class="flex-1 mb-6">
+                                <p class="text-lg font-medium text-white">
+                                    "The AI-powered insights have given us a competitive edge in our market research"
+                                </p>
+                            </blockquote>
+                            <footer>
+                                <div class="font-medium text-white">Alex Chen</div>
+                                <div class="text-sm text-gray-400">Lead Analyst @ DataFlow</div>
+                            </footer>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Testimonial 3 -->
+                <div class="relative group">
+                    <div class="absolute inset-0 bg-purple-600/20 blur-xl group-hover:bg-purple-600/30 transition-colors duration-300"></div>
+                    <div class="relative bg-black/40 backdrop-blur-sm rounded-2xl p-6 border border-white/10">
+                        <div class="flex flex-col h-full">
+                            <div class="mb-6">
+                                <img
+                                    src="https://images.unsplash.com/photo-1438761681033-6461ffad8d80?ixlib=rb-4.0.3&auto=format&fit=crop&w=96&h=96&q=80"
+                                    alt="Sarah Martinez"
+                                    class="w-24 h-24 rounded-2xl object-cover"
+                                />
+                            </div>
+                            <blockquote class="flex-1 mb-6">
+                                <p class="text-lg font-medium text-white">
+                                    "Implementation was seamless, and the results were immediate and impressive"
+                                </p>
+                            </blockquote>
+                            <footer>
+                                <div class="font-medium text-white">Sarah Martinez</div>
+                                <div class="text-sm text-gray-400">CTO @ TechForward</div>
+                            </footer>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Pricing Section -->
+    <section id="pricing" class="relative bg-gradient-to-b from-purple-900/20 via-purple-950/30 to-transparent py-32">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <h2 class="text-4xl sm:text-5xl font-bold tracking-tight text-white mb-4">Pricing.</h2>
+            <p class="text-lg text-gray-400 mb-12 max-w-2xl mx-auto">
+                Choose the right plan to meet your SEO needs and start optimizing today.
+            </p>
+
+            <!-- Billing Toggle -->
+            <div class="flex items-center justify-center gap-2 mb-12">
+                <div class="h-6 bg-black/40 backdrop-blur-sm rounded-full border border-white/10 px-1 inline-flex items-center">
+                    <div class="w-4 h-4 rounded-full bg-purple-600 mr-2"></div>
+                    <span class="text-sm text-gray-300 pr-2">Billed yearly</span>
+                </div>
+            </div>
+
+            <!-- Pricing Cards -->
+            <div class="grid md:grid-cols-3 gap-8 max-w-5xl mx-auto">
+                <!-- Basic Plan -->
+                <div class="relative group">
+                    <div class="relative bg-black/40 backdrop-blur-sm rounded-2xl p-6 border border-white/10 h-full">
+                        <div class="flex flex-col h-full">
+                            <h3 class="text-xl font-semibold text-white mb-2">Basic</h3>
+                            <div class="text-3xl font-bold text-white mb-6 font-['stick']">
+                                $29<span class="text-lg font-normal text-gray-400">/mo</span>
+                            </div>
+
+                            <ul class="space-y-4 mb-8 flex-1">
+                                <li class="flex items-center text-gray-300">
+                                    <svg class="w-5 h-5 mr-2 text-purple-500" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+                                    </svg>
+                                    Keyword optimization
+                                </li>
+                                <li class="flex items-center text-gray-300">
+                                    <svg class="w-5 h-5 mr-2 text-purple-500" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+                                    </svg>
+                                    Automated meta tags
+                                </li>
+                                <li class="flex items-center text-gray-300">
+                                    <svg class="w-5 h-5 mr-2 text-purple-500" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+                                    </svg>
+                                    SEO monitoring
+                                </li>
+                                <li class="flex items-center text-gray-300">
+                                    <svg class="w-5 h-5 mr-2 text-purple-500" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+                                    </svg>
+                                    Monthly reports
+                                </li>
+                            </ul>
+
+                            <button class="w-full border border-white/20 text-white hover:bg-white/10 px-6 py-2 rounded-xl transition-colors duration-200">
+                                Try for free
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Pro Plan -->
+                <div class="relative group">
+                    <div class="absolute inset-0 bg-purple-600/20 blur-xl group-hover:bg-purple-600/30 transition-colors duration-300"></div>
+                    <div class="relative bg-black/40 backdrop-blur-sm rounded-2xl p-6 border border-purple-500/20 h-full">
+                        <div class="absolute -top-3 right-4 bg-purple-600 text-white text-xs px-3 py-1 rounded-full">
+                            POPULAR
+                        </div>
+                        <div class="flex flex-col h-full">
+                            <h3 class="text-xl font-semibold text-white mb-2">Pro</h3>
+                            <div class="text-3xl font-bold text-white mb-6 font-['stick']">
+                                $79<span class="text-lg font-normal text-gray-400">/mo</span>
+                            </div>
+
+                            <ul class="space-y-4 mb-8 flex-1">
+                                <li class="flex items-center text-gray-300">
+                                    <svg class="w-5 h-5 mr-2 text-purple-500" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+                                    </svg>
+                                    Keyword optimization
+                                </li>
+                                <li class="flex items-center text-gray-300">
+                                    <svg class="w-5 h-5 mr-2 text-purple-500" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+                                    </svg>
+                                    Automated meta tags
+                                </li>
+                                <li class="flex items-center text-gray-300">
+                                    <svg class="w-5 h-5 mr-2 text-purple-500" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+                                    </svg>
+                                    SEO monitoring
+                                </li>
+                                <li class="flex items-center text-gray-300">
+                                    <svg class="w-5 h-5 mr-2 text-purple-500" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+                                    </svg>
+                                    Monthly reports
+                                </li>
+                                <li class="flex items-center text-gray-300">
+                                    <svg class="w-5 h-5 mr-2 text-purple-500" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+                                    </svg>
+                                    Content suggestions
+                                </li>
+                                <li class="flex items-center text-gray-300">
+                                    <svg class="w-5 h-5 mr-2 text-purple-500" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+                                    </svg>
+                                    Link optimization
+                                </li>
+                            </ul>
+
+                            <button class="w-full bg-purple-600 hover:bg-purple-700 text-white px-6 py-2 rounded-xl transition-colors duration-200">
+                                Get started
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Business Plan -->
+                <div class="relative group">
+                    <div class="relative bg-black/40 backdrop-blur-sm rounded-2xl p-6 border border-white/10 h-full">
+                        <div class="flex flex-col h-full">
+                            <h3 class="text-xl font-semibold text-white mb-2">Business</h3>
+                            <div class="text-3xl font-bold text-white mb-6 font-['stick']">
+                                $149<span class="text-lg font-normal text-gray-400">/mo</span>
+                            </div>
+
+                            <ul class="space-y-4 mb-8 flex-1">
+                                <li class="flex items-center text-gray-300">
+                                    <svg class="w-5 h-5 mr-2 text-purple-500" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+                                    </svg>
+                                    Keyword optimization
+                                </li>
+                                <li class="flex items-center text-gray-300">
+                                    <svg class="w-5 h-5 mr-2 text-purple-500" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+                                    </svg>
+                                    Automated meta tags
+                                </li>
+                                <li class="flex items-center text-gray-300">
+                                    <svg class="w-5 h-5 mr-2 text-purple-500" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+                                    </svg>
+                                    SEO monitoring
+                                </li>
+                                <li class="flex items-center text-gray-300">
+                                    <svg class="w-5 h-5 mr-2 text-purple-500" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+                                    </svg>
+                                    Monthly reports
+                                </li>
+                                <li class="flex items-center text-gray-300">
+                                    <svg class="w-5 h-5 mr-2 text-purple-500" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+                                    </svg>
+                                    Content suggestions
+                                </li>
+                                <li class="flex items-center text-gray-300">
+                                    <svg class="w-5 h-5 mr-2 text-purple-500" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+                                    </svg>
+                                    Link optimization
+                                </li>
+                                <li class="flex items-center text-gray-300">
+                                    <svg class="w-5 h-5 mr-2 text-purple-500" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+                                    </svg>
+                                    Multi-user access
+                                </li>
+                                <li class="flex items-center text-gray-300">
+                                    <svg class="w-5 h-5 mr-2 text-purple-500" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+                                    </svg>
+                                    API integration
+                                </li>
+                            </ul>
+
+                            <button class="w-full border border-white/20 text-white hover:bg-white/10 px-6 py-2 rounded-xl transition-colors duration-200">
+                                Get started
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="relative bg-gradient-to-b from-purple-900/20 via-purple-950/30 to-transparent py-32 pb-20">
+        <div class="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <h2 class="text-4xl sm:text-5xl font-bold tracking-tight text-white mb-4">Contact us.</h2>
+            <p class="text-lg text-gray-400 mb-12">
+                Integrates effortlessly with all major content management systems with no technical setup required.
+            </p>
+
+            <div class="bg-black/40 backdrop-blur-sm rounded-xl p-6 sm:p-8 border border-white/10 glow-purple-lg">
+                <form id="contact-form" class="grid gap-6">
+                    <div class="grid sm:grid-cols-2 gap-6">
+                        <div class="grid gap-2">
+                            <label class="text-sm text-gray-400 text-left">First name</label>
+                            <input
+                                type="text"
+                                name="firstName"
+                                placeholder="ALucard"
+                                required
+                                class="bg-white/5 border border-white/10 rounded-lg px-4 py-2 text-white placeholder:text-gray-500 focus:outline-none focus:ring-2 focus:ring-purple-600 transition-all duration-200"
+                            />
+                        </div>
+                        <div class="grid gap-2">
+                            <label class="text-sm text-gray-400 text-left">Last name</label>
+                            <input
+                                type="text"
+                                name="lastName"
+                                placeholder="Hellsing"
+                                required
+                                class="bg-white/5 border border-white/10 rounded-lg px-4 py-2 text-white placeholder:text-gray-500 focus:outline-none focus:ring-2 focus:ring-purple-600 transition-all duration-200"
+                            />
+                        </div>
+                    </div>
+
+                    <div class="grid sm:grid-cols-2 gap-6">
+                        <div class="grid gap-2">
+                            <label class="text-sm text-gray-400 text-left">Email</label>
+                            <input
+                                type="email"
+                                name="email"
+                                placeholder="Alucardhellsing@gmail.com"
+                                required
+                                class="bg-white/5 border border-white/10 rounded-lg px-4 py-2 text-white placeholder:text-gray-500 focus:outline-none focus:ring-2 focus:ring-purple-600 transition-all duration-200"
+                            />
+                        </div>
+                        <div class="grid gap-2">
+                            <label class="text-sm text-gray-400 text-left ">Company name</label>
+                            <input
+                                type="text"
+                                name="company"
+                                placeholder="gmail"
+                                class="bg-white/5 border border-white/10 rounded-lg px-4 py-2 text-white placeholder:text-gray-500 focus:outline-none focus:ring-2 focus:ring-purple-600 transition-all duration-200"
+                            />
+                        </div>
+                    </div>
+
+                    <div class="grid gap-2">
+                        <label class="text-sm text-gray-400 text-left ">How can we help?</label>
+                        <textarea
+                            name="message"
+                            rows="4"
+                            placeholder="Describe your problem"
+                            required
+                            class="bg-white/5 border border-white/10 rounded-lg px-4 py-2 font-['stick'] text-white placeholder:text-gray-500 focus:outline-none focus:ring-2 focus:ring-purple-600 resize-none transition-all duration-200"
+                        ></textarea>
+                    </div>
+
+                    <button
+                        type="submit"
+                        class="bg-white text-black hover:bg-gray-100 w-full sm:w-auto sm:justify-self-center px-8 py-3 rounded-xl font-medium font-['stick'] transition-colors duration-200"
+                    >
+                        Send message
+                    </button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="relative border-t border-white/10 bg-gradient-to-b from-purple-900/10 to-black">
+        <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+            <nav class="py-8">
+                <!-- Primary Navigation -->
+                <ul class="flex flex-wrap justify-center gap-x-8 gap-y-3 font-['stick'] mb-4">
+                    <li><a href="#" class="text-sm text-gray-400 hover:text-white transition-colors">Index</a></li>
+                    <li><a href="#" class="text-sm text-gray-400 hover:text-white transition-colors">Example 1</a></li>
+                    <li><a href="#" class="text-sm text-gray-400 hover:text-white transition-colors">Example 2</a></li>
+                    <li><a href="#" class="text-sm text-gray-400 hover:text-white transition-colors">Navigation</a></li>
+                    <li><a href="#" class="text-sm text-gray-400 hover:text-white transition-colors">Footer</a></li>
+                    <li><a href="#" class="text-sm text-gray-400 hover:text-white transition-colors">Hero</a></li>
+                    <li><a href="#" class="text-sm text-gray-400 hover:text-white transition-colors">Button</a></li>
+                    <li><a href="#" class="text-sm text-gray-400 hover:text-white transition-colors">Features</a></li>
+                    <li><a href="#" class="text-sm text-gray-400 hover:text-white transition-colors">3D Assets</a></li>
+                </ul>
+
+                <!-- Secondary Navigation -->
+                <ul class="flex flex-wrap justify-center gap-x-8 font-['stick'] gap-y-3">
+                    <li><a href="#testimonials" class="text-sm text-gray-400 hover:text-white transition-colors">Testimonial</a></li>
+                    <li><a href="#" class="text-sm text-gray-400 hover:text-white transition-colors">Icons</a></li>
+                    <li><a href="#" class="text-sm text-gray-400 hover:text-white transition-colors">Companies</a></li>
+                    <li><a href="#" class="text-sm text-gray-400 hover:text-white transition-colors">Patterns</a></li>
+                    <li><a href="#pricing" class="text-sm text-gray-400 hover:text-white transition-colors">Pricing</a></li>
+                    <li><a href="#" class="text-sm text-gray-400 hover:text-white transition-colors">Typography</a></li>
+                    <li><a href="#" class="text-sm text-gray-400 hover:text-white transition-colors">Changelog</a></li>
+                    <li><a href="#" class="text-sm text-gray-400 hover:text-white transition-colors">CTA</a></li>
+                    <li><a href="#contact" class="text-sm text-gray-400 hover:text-white transition-colors">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </footer>
+    <script src="/index.js"></script>
+</body>
+</html>
